@@ -31,10 +31,10 @@
         vkBridge.send("VKWebAppShowNativeAds", {ad_format:adFormat, use_waterfall:waterfall});
         vkBridge.subscribe((e) => {
         if(e.detail.type == 'VKWebAppShowNativeAdsResult' && e.detail.data.result == true) {
-            ss.SendMessage('VkBridge', 'ShowAdsResultff', 'good');
+            ss.SendMessage('VkBridge', 'ShowAdsResult', 'good');
         }
         if(e.detail.type == 'VKWebAppShowNativeAdsFailed') {
-           ss.SendMessage('VkBridge', 'ShowAdsResultff', 'noGood');
+           ss.SendMessage('VkBridge', 'ShowAdsResult', 'noGood');
         }
         });
       }
